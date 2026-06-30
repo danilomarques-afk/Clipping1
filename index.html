@@ -189,9 +189,16 @@
         .image-gallery {
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 32px; /* Aumentei um pouco o gap para respirar com os textos */
             align-items: center;
             margin-top: 20px;
+        }
+
+        .image-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
         }
 
         .print-image {
@@ -203,6 +210,16 @@
             background: rgba(255, 255, 255, 0.05);
             padding: 10px;
             backdrop-filter: blur(10px);
+        }
+
+        .image-caption {
+            margin-top: 12px;
+            font-size: 0.95rem;
+            color: var(--claro-1);
+            text-align: center;
+            font-weight: 400;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
         }
 
         /* Responsividade Mobile */
@@ -223,6 +240,9 @@
             }
             .category-title {
                 font-size: 1.3rem;
+            }
+            .image-caption {
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -355,8 +375,14 @@
         <div class="category">
             <div class="category-title">📰 Jornais Impressos</div>
             <div class="image-gallery">
-                <img src="Impresso 1.png" alt="Acaert apresenta Central das Eleições - Matéria Impressa" class="print-image">
-                <img src="Impresso 2.png" alt="Vitrine Acaert - Recorte Impresso" class="print-image">
+                <div class="image-item">
+                    <img src="impresso-1.png" alt="Coluna do Paulo Rolemberg/ ND" class="print-image">
+                    <div class="image-caption">Coluna do Paulo Rolemberg/ ND</div>
+                </div>
+                <div class="image-item">
+                    <img src="impresso-2.png" alt="Matéria do ND, edição de 27/06" class="print-image">
+                    <div class="image-caption">Matéria do ND, edição de 27/06</div>
+                </div>
             </div>
         </div>
 
